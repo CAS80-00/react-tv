@@ -21,3 +21,80 @@
   flex-direction: column;
   gap: 1ch;
 }
+/* The container holding all the buttons */
+.episode-list {
+  display: flex;
+  flex-direction: column; /* Forces them into a strict vertical column */
+  gap: 12px; /* Adds clean spacing between each vertical item */
+  align-items: flex-start; /* Aligns text neatly to the left side */
+  padding: 15px;
+}
+
+/* The individual episode rows */
+.episode {
+  background: none; /* REMOVES the background box color */
+  border: none; /* REMOVES the box border */
+  padding: 4px 0; /* Spacing top/bottom, none on sides */
+  text-align: left; /* Aligns text to the left */
+  font-size: 16px;
+  color: #333333; /* Choose your text color */
+  cursor: pointer;
+  width: 100%; /* Makes the clickable area span the whole line */
+  transition: color 0.2s ease;
+}
+
+/* What happens when they hover over an episode text */
+.episode:hover {
+  color: #ffffff; /* Turns blue (or your choice of color) on hover */
+  text-decoration: underline; /* Makes it look like a clean, clickable link */
+}
+
+/* What happens when an episode is currently clicked/active */
+.episode.selected {
+  font-weight: bold; /* Makes the selected text stand out */
+  color: #ffffff;
+}
+/* This sets up a two-column grid layout */
+.show-content {
+  display: grid;
+  grid-template-columns: 300px 1fr; /* Left side is exactly 300px, Right side takes the remaining space */
+  gap: 30px; /* Adds a clean gap between the columns */
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+/* Optional styling to make the right side details panel pop out nicely */
+.episode-details-panel {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.episode-detail-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.episode-meta {
+  color: #666;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+/* Style for when nothing is selected yet */
+.episode-details-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 40px;
+  color: #888;
+  text-align: center;
+  min-height: 200px;
+}

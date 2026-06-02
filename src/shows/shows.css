@@ -20,6 +20,12 @@
   display: grid;
   gap: 1rem;
 }
+/* Underline the active show navigation link */
+.show.active {
+  text-decoration: underline;
+  text-underline-offset: 4px; /* Gives the line a little breathing room */
+  font-weight: bold; /* Optional: makes it pop like the screenshot */
+}
 
 @media (width >= 500px) {
   .show-details {
